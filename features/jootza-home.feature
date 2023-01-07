@@ -9,7 +9,7 @@ Feature: As a jootza customer, I want to be able to navigate to landing poage so
 
   @jootza @jootzaLogin
   Scenario: Customer is displayed with jootza.com landing page and tries to login into the portal s
-    Given I am on the Jootza portal
+    Given I am on the Jootza portal Page
     And I enter the inputs for login
       | InputName | InputValue  |
       | username  | johndoe     |
