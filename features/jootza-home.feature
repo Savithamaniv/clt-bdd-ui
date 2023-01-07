@@ -8,7 +8,7 @@ Feature: As a jootza customer, I want to be able to navigate to landing poage so
     Then I should see "LoginHeader"
 
   @jootza @jootzaLogin
-  Scenario: Customer is displayed with jootza.com landing page and tries to login into the portal
+  Scenario: Customer is displayed with jootza.com landing page and tries to login into the portal s
     Given I am on the Jootza portal
     And I enter the inputs for login
       | InputName | InputValue  |
