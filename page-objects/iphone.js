@@ -5,22 +5,21 @@ const helpers = require("../runtime/helpers");
 module.exports = {
 
     appleurl: 'https://www.apple.com/',
-    Appleprod: '/html/body/nav[2]/div/div/button[1]',
-
-    elements: {
-        
-        Mac: '/html/body/nav[1]/div/ul[2]/li[3]/a', 
+        elements: {
+         Mac1: '/html/body/nav[1]/div/ul[2]/li[3]/a', 
+         AppleProducts: '/html/body/nav[2]/div/ul',
     },
-    clickElement: async function(objectKey) {
+    clickElement: async function(Mac1) {
         // eslint-disable-next-line no-console
-        var selector = page.iphone.elements[objectKey];
-        await driver.sleep(1000);
-        return driver.findElement(By.xpath(selector)).click();
+        var selector1 = page.iphone.elements[Mac1];
+        //console.log('test'+selector1);
+        await driver.sleep(3000);
+        return driver.findElement(By.xpath(selector1)).click();
     },
-    elementExists: async function(objectKey) {
+    elementExists: async function(AppleProducts) {
         // eslint-disable-next-line no-console
-        var selector = page.iphone.elements[objectKey];
-        await driver.sleep(1000);
-        return driver.findElement(By.xpath(selector));
+        var selector2 = page.iphone.elements[AppleProducts];
+        await driver.sleep(2000);
+        return driver.findElement(By.xpath(selector2));
     },
 };

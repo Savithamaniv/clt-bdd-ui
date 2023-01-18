@@ -73,3 +73,15 @@ Feature: As a jootza customer, I want to be able to navigate to landing poage so
       | FridayNotes    | Worked on User story CLT-B3-009 |
     And I click on  "Submit"
 #Then I should see "Timesheet Created"  Message
+  @jootza @recordTime
+  Scenario Outline: Customer is logging into the jootza website to record time
+    Given I am on logged on to the Jootza portal as "<Jootza Customer>"
+    And I enter notes field for days
+      | FieldName      | FieldValue                      |
+      | MondayNotes    | Worked on User story CLT-B3-009 |
+      | TuesdayNotes   | Worked on User story CLT-B3-009 |
+      | WednesdayNotes | Worked on User story CLT-B3-009 |
+      | ThursdayNotes  | Worked on User story CLT-B3-009 |
+      | FridayNotes    | Worked on User story CLT-B3-009 |
+    And I click on  "Submit"
+#Then I should see "Timesheet Created"  Message

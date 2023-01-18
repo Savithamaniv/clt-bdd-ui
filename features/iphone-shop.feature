@@ -3,8 +3,8 @@ Feature: As a iPhone customer, I want to able login the page and do shopping MAc
 @Iphones @Mac
 Scenario: Mac Book shopping on Apple website
 Given I click on apple website 
-When I click on the "Mac" 
-Then I am able to see many apple products
+When I press on the "Mac1" 
+Then I am able to see many "AppleProducts"
 
 #@Iphone @Macmini
 #Scenario: Mac Book shopping on Apple.com website
