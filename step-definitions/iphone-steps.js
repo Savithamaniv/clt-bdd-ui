@@ -9,4 +9,10 @@ module.exports = function () {
     this.Then(/^I am able to see many "([^"]*)"$/, function(objectKey) {
         return page.iphone.elementExists(objectKey) 
     });
+    this.When(/^I click on the "([^"]*)"$/, function (objectKey) {
+        return page.iphone.clickElement(objectKey);
+    });  
+    this.Then(/^I see the "([^"]*)" button$/, function(objectKey) {
+        return page.iphone.elementExists(objectKey) 
+    });
 };

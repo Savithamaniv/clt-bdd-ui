@@ -22,19 +22,26 @@ module.exports = function () {
 */
 
 module.exports =  function ()
-{
-    
+{   
     this.Given(/^I am on the costco portal$/, function () {
         return helpers.loadPage(page.costco.url);
-    });
-   
-   this.When(/^I see Click on "([^"]*)"$/, function (objectKey) {
-  // this.When(/I see Click on Register$/,function(objectKey) {
+    });   
+   this.When(/^I presson "([^"]*)"$/, function (objectKey) {
         return page.costco.clickElement(objectKey);
     });
-    this.Then(/^I should see "([^"]*)"$/, function (objectKey) {
-      //  this.Then(/I should see SignIn$/, function (objectKey) {  
+    this.Then(/^I must see "([^"]*)"$/, function (objectKey) {
     return page.costco.elementExists(objectKey);
     });
+
+    this.When(/^I enter the email and password in the form fields$/, async function (table) {
+        const fields = table.rows();
+        console.log(fields);
+        for (i = 0; i < fields.length; i++) {
+            console.log(page.costco.inputElement(fields[i][0], fields[i][1]));
+        };
+        await driver.sleep(3000);
+        return;
+    });
+
 
 };
